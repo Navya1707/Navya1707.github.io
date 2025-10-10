@@ -17,7 +17,7 @@ projects:
     subtitle: "Built a real-time driver monitoring system using computer vision and deep learning"
     tech_stack: "Python, OpenCV, TensorFlow, Keras"
     thumbnail: "assets/posts/github-capa.jpg"
-    url: "https://github.com/Navya1707/intelligent-driver-drowsiness"
+    url: "https://github.com/Navya1707/Intelligent-Driver-Drowsiness-Detection"
     selected: y
 
   - title: "AI-Powered PDF Chatbot"
@@ -39,5 +39,5 @@ projects:
     subtitle: "Designed and developed a netflix themed personal portfolio website"
     tech_stack: "React, Tailwind CSS, JavaScript"
     thumbnail: "assets/posts/github-capa.jpg"
-    url: "https://github.com/Navya1707/personal-portfolio-website"
+    url: "https://github.com/Navya1707/personal-portfolio"
     selected: y

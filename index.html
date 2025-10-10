@@ -1,0 +1,323 @@
+---
+layout: default
+title: Home
+---
+<!-- ========== About ========== -->
+<div class="docs-section" id="about">
+  <h4>About</h4>
+  <p>
+    I am an Applied Scientist in the Investment Banking line of business at JPMorgan Chase, where I am currently conducting fundamental research on the theory and science of Gradient Boosting and Semi-Supervised Graph models in Fraud Intelligence. I previously earned my Bachelors in Computer Science with a specialization in Big Data, graduating from SRMIST in 2023. My research interests are ML/DL and Natural Language Processing and my interest topics include <b>Probabilistic Reasoning, Sequence Models, Human-Centered AI, HCI, Causality, and Explainability</b>. During my Bachelors, I have worked on Applied NLP at Samsung Research and the  at McGill University.
+  </p>
+    <p>
+        I am enthusiastically open to collaboration on exciting research that drives innovation. If you're interested in working together or have opportunities available, please feel free to reach out to me!
+    </p>
+</div>
+
+<!-- ========== SKILLS ========== -->
+
+<section class="skills-section" id="skills" >
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Software Practices</h3>
+      <div class="skill-tools">
+          <div class="skill-box">Data Structures & Algorithms</div>
+          <div class="skill-box">Distributed Systems</div>
+          <div class="skill-box">Fine-Tuning</div>
+          <div class="skill-box">Model Governance</div>
+      </div>
+    </div>
+
+      <div class="skill-category">
+          <h3>Machine Learning & AI</h3>
+          <div class="skill-tools">
+              <div class="skill-box">Probabilistic Reasoning</div>
+              <div class="skill-box">Natural Language Processing</div>
+              <div class="skill-box">Graph Modeling</div>
+              <div class="skill-box">Ranking & Recommendation</div>
+          </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools & Technologies</h3>
+        <div class="skill-tools">
+            <div class="skill-box">Python</div>
+            <div class="skill-box">SQL</div>
+            <div class="skill-box">Scikit-Learn</div>
+            <div class="skill-box">PyTorch</div>
+            <div class="skill-box">TensorFlow</div>
+            <div class="skill-box">Caffe</div>
+        </div>
+    </div>
+
+      <div class="skill-category">
+          <h3>Big Data</h3>
+          <div class="skill-tools">
+              <div class="skill-box">Hadoop</div>
+              <div class="skill-box">Spark</div>
+              <div class="skill-box">Kafka</div>
+              <div class="skill-box">ZooKeeper</div>
+              <div class="skill-box">Splunk</div>
+          </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Backend Dev</h3>
+        <div class="skill-tools">
+            <div class="skill-box">Microservices</div>
+            <div class="skill-box">FastAPI</div>
+            <div class="skill-box">Spring Boot</div>
+            <div class="skill-box">Flask</div>
+        </div>
+    </div>
+
+      <div class="skill-category">
+        <h3>Cloud Platforms</h3>
+        <div class="skill-tools">
+            <div class="skill-box">AWS</div>
+            <div class="skill-box">Docker</div>
+            <div class="skill-box">K8S</div>
+            <div class="skill-box">MLFlow</div>
+            <div class="skill-box">Jenkins</div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ========== CERTIFICATIONS ========== -->
+
+<!-- <section id="certifications" class="certifications-section">
+  <h2>Certifications</h2>
+  <div class="badges-grid">
+      <img src="assets/certifications/aws-certified-machine-learning-specialty.png" alt="AWS Certified Solutions Architect" title="AWS Certified Solutions Architect" />
+      <img src="assets/certifications/aws-certified-machine-learning-specialty.png" alt="AWS Certified Developer" title="AWS Certified Developer" />
+    </div>
+</section> -->
+
+<!-- <section id="certifications" class="certifications-section">
+  <h2>Certifications</h2>
+  <div class="certifications-grid">
+      <div class="cert-box">
+          <img src="assets/certifications/aws-certified-machine-learning-specialty.png" alt="AWS Certified Machine Learning Specialist" />
+          <p>AWS Certified Machine Learning Specialist</p>
+      </div>
+      <div class="cert-box">
+          <img src="path/to/aws-certified-developer.png" alt="AWS Certified Developer" />
+          <p>AWS Certified Developer</p>
+      </div>
+      <div class="cert-box">
+          <img src="path/to/aws-certified-devops.png" alt="AWS Certified DevOps Engineer" />
+          <p>AWS Certified DevOps Engineer</p>
+      </div>
+  </div>
+</section> -->
+
+<!-- ========== NEWS ========== -->
+<div class="docs-section" id="news">
+    <h4><b>News</b></h4>
+    <UL style="list-style-type: none; padding: 2px; overflow-y: scroll; height:500px;">
+
+        {% for nw in site.data.news.news %}
+        <!-- <a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a> -->
+
+        <div class="row"><div class="twop columns"><b>{{ nw.date }}</b></div> <div class="ten columns">{{ nw.title }} <i>{{ nw.subtitle }}</i></div></div>
+        {% endfor %}
+    </UL>
+</div>
+
+<!-- ========== PUBLICATIONS ========== -->
+
+<div class="docs-section" id="publications">
+  <h4>Publications</h4>
+
+  <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
+  <sup>‡</sup> indicates equal contribution.
+  </p> -->
+
+  <ul class="tab-nav">
+    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
+    <li><div class="button" data-ref="#papers-all">All</div></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="papers-selected">
+      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+      {% for paper in selected_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
+
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="tab-pane" id="papers-all">
+      {% for paper in site.data.publications.papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
+
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- ========== PROJECTS ========== -->
+<div class="docs-section" id="projects">
+  <h4>Projects</h4>
+  <div class="tab-pane" id="projects-all">
+    {% for project in site.data.projects.projects %}
+      {% assign index_modulo = forloop.index0 | modulo:3 %}
+      {% if index_modulo == 0 %}
+        <div class="row">
+      {% endif %}
+
+        <div class="four columns">
+          <div class="project-container">
+
+              <div class="project-image-container">
+                <a href="{{ project.url }}">
+                  <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+                </a>
+              </div>
+
+              <div class="project-caption">
+                <b>{{ project.title }}</b> <br/>
+                {{ project.subtitle }}
+              </div>
+
+          </div>
+        </div>
+
+      {% if index_modulo == 2 %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div> 
+
+<!-- ========== ARTICLES ========== -->
+<div class="docs-section" id="posts">
+  <h4>Articles</h4>
+  <div class="tab-pane" id="projects-all">
+    {% assign selected_posts = site.data.posts.posts | where: "selected", "y" %}
+    {% for post in selected_posts %}
+      {% assign index_modulo = forloop.index0 | modulo:3 %}
+      {% if index_modulo == 0 %}
+        <div class="row">
+      {% endif %}
+
+        <div class="four columns">
+          <div class="project-container">
+              <div class="project-image-container">
+                <a href="{{ post.url }}">
+                  <img src="{{ post.thumbnail }}" class="u-max-full-width" />
+                </a>
+              </div>
+              <div class="project-caption">
+                <b>{{ post.title }}</b> <br/>
+                {{ post.subtitle }}
+              </div>
+
+          </div>
+        </div>
+
+      {% if index_modulo == 2 %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div> 
+
+
+<!-- ========== RESUME ========== -->
+<div class="docs-section-last" id="resume">
+  <h4>Vit&#230;</h4>
+  <p>Here is my <a href={{ "/assets/Navya_Resume.pdf" | prepend: site.baseurl }} target="_blank">Resume</a>.</p>
+    <!-- The Timeline -->
+    <ul class="timeline">
+        {% for exp in site.data.experience.experiences %}
+        <li>
+            {% if exp.category == "work" %}
+            <div class="direction-l">
+                {% else %}
+                <div class="direction-r">
+                    {% endif %}
+                    <div class="flag-wrapper">
+                        <span class="flag">{{ exp.place }}</span>
+                        <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+                    </div>
+                    <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
+                </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ========== ACKNOWLEDGEMENTS ========== -->
+<!-- <div class="docs-section" id="ack">
+  <h4>Acknowledgements</h4>
+  <p>
+    This website uses the design and template by <a href="https://github.com/msaveski/www_personal">Martin Saveski</a>.
+  </p>
+  
+</div> -->

@@ -1,0 +1,6 @@
+
+*.DS_Store
+ToDo.todo
+README.md
+.jekyll-cache
+_site/*

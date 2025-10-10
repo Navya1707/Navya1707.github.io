@@ -1,0 +1,36 @@
+experiences:
+  - place: "University of Washington"
+    time: "Sepc 2025 - Present"
+    title: "Masters"
+    subtitle: "MS in Data Science"
+    category: "School"
+
+  - place: "Oracle"
+    time: "May 2025 - Aug 2025"
+    title: "Senior Member of Technical Staff"
+    subtitle: "Oracle Health and AI \nDeveloped and optimized AI clinical models"
+    category: "work"
+
+  - place: "Goldman Sachs"
+    time: "March 2024 - April 2025"
+    title: "Quantitative Strategist"
+    subtitle: "Modeled derivatives, optimized investments, built pipelines"
+    category: "work"
+
+  - place: "Goldman Sachs"
+    time: "Aug 2021 - Feb 2024"
+    title: "Sofware Developer"
+    subtitle: "Built payments pipeline for asset management"
+    category: "work"
+
+  - place: "Ramaiah Institute of Technology"
+    time: "Jan 2021 - June 2021"
+    title: "Research Intern"
+    subtitle: "Graph Neural Networks for COVID"
+    category: "School"
+
+  - place: "Ramaiah Institute of Technology"
+    time: "July 2017 - July 2021"
+    title: "Student"
+    subtitle: "Electronics and Communication with a specialization in Machine Learning"
+    category: "School"

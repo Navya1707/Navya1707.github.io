@@ -1,0 +1,43 @@
+projects:
+  - title: "Distributed Caching Infrastructure"
+    subtitle: "Developed a high-performance, scalable, and fault-tolerant caching solution using Go"
+    tech_stack: "Go, Zookeper, Redis, Shell, Docker"
+    thumbnail: "assets/posts/github-capa.jpg"
+    url: "https://github.com/Navya1707/distributed-caching-infrastructure"
+    selected: y
+
+  - title: "Graph-Based Recommendation System"
+    subtitle: "Implemented a graph traversal approach for intelligent content recommendations in Python"
+    tech_stack: "Python, NetworkX, Pandas, Scikit-learn"
+    thumbnail: "assets/posts/github-capa.jpg"
+    url: "https://github.com/Navya1707/Graph-based-recommendation-system"
+    selected: y
+
+  - title: "Intelligent Driver Drowsiness Detection"
+    subtitle: "Built a real-time driver monitoring system using computer vision and deep learning"
+    tech_stack: "Python, OpenCV, TensorFlow, Keras"
+    thumbnail: "assets/posts/github-capa.jpg"
+    url: "https://github.com/Navya1707/intelligent-driver-drowsiness"
+    selected: y
+
+  - title: "AI-Powered PDF Chatbot"
+    subtitle: "Query multiple PDFs in natural language using LLM embeddings and Streamlit UI"
+    tech_stack: "Python, LangChain, OpenAI API, Streamlit"
+    thumbnail: "assets/posts/github-capa.jpg"
+    url: "https://github.com/Navya1707/AI-PDF-Chatbot"
+    selected: y
+
+  - title: "Stock Prediction Dashboard"
+    subtitle: "Visualized and predicted stock trends using time-series ML models with interactive dashboards"
+    tech_stack: "JavaScript, Python, Dash, Plotly"
+    thumbnail: "assets/posts/github-capa.jpg"
+    url: "https://github.com/Navya1707/stock-prediction-dashboard"
+    selected: y
+
+  
+  - title: "Netflix themed Portfolio Website"
+    subtitle: "Designed and developed a netflix themed personal portfolio website"
+    tech_stack: "React, Tailwind CSS, JavaScript"
+    thumbnail: "assets/posts/github-capa.jpg"
+    url: "https://github.com/Navya1707/personal-portfolio-website"
+    selected: y

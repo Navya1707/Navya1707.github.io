@@ -112,108 +112,7 @@ title: Home
   </div>
 </section> -->
 
-<!-- ========== NEWS ========== -->
-<div class="docs-section" id="news">
-    <h4><b>News</b></h4>
-    <UL style="list-style-type: none; padding: 2px; overflow-y: scroll; height:500px;">
 
-        {% for nw in site.data.news.news %}
-        <!-- <a class="navbar-link" href={{ "/index.html#bio" | prepend: site.baseurl }}>Bio</a> -->
-
-        <div class="row"><div class="twop columns"><b>{{ nw.date }}</b></div> <div class="ten columns">{{ nw.title }} <i>{{ nw.subtitle }}</i></div></div>
-        {% endfor %}
-    </UL>
-</div>
-
-<!-- ========== PUBLICATIONS ========== -->
-
-<div class="docs-section" id="publications">
-  <h4>Publications</h4>
-
-  <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
-  <sup>‡</sup> indicates equal contribution.
-  </p> -->
-
-  <ul class="tab-nav">
-    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
-    <li><div class="button" data-ref="#papers-all">All</div></li>
-  </ul>
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-      {% for paper in selected_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
-
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
-
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="papers-all">
-      {% for paper in site.data.publications.papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
-
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
-
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
 
 <!-- ========== PROJECTS ========== -->
 <div class="docs-section" id="projects">
@@ -236,7 +135,8 @@ title: Home
 
               <div class="project-caption">
                 <b>{{ project.title }}</b> <br/>
-                {{ project.subtitle }}
+                {{ project.subtitle }} <br/>
+                {{ project.tech_stack}}
               </div>
 
           </div>
@@ -250,39 +150,6 @@ title: Home
 
 </div> 
 
-<!-- ========== ARTICLES ========== -->
-<div class="docs-section" id="posts">
-  <h4>Articles</h4>
-  <div class="tab-pane" id="projects-all">
-    {% assign selected_posts = site.data.posts.posts | where: "selected", "y" %}
-    {% for post in selected_posts %}
-      {% assign index_modulo = forloop.index0 | modulo:3 %}
-      {% if index_modulo == 0 %}
-        <div class="row">
-      {% endif %}
-
-        <div class="four columns">
-          <div class="project-container">
-              <div class="project-image-container">
-                <a href="{{ post.url }}">
-                  <img src="{{ post.thumbnail }}" class="u-max-full-width" />
-                </a>
-              </div>
-              <div class="project-caption">
-                <b>{{ post.title }}</b> <br/>
-                {{ post.subtitle }}
-              </div>
-
-          </div>
-        </div>
-
-      {% if index_modulo == 2 %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-
-</div> 
 
 
 <!-- ========== RESUME ========== -->

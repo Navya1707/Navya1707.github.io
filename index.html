@@ -136,7 +136,7 @@ title: Home
               <div class="project-caption">
                 <b>{{ project.title }}</b> <br/>
                 {{ project.subtitle }} <br/>
-                {{ project.tech_stack}}
+                <i> {{ project.tech_stack}} </i>
               </div>
 
           </div>
@@ -154,8 +154,11 @@ title: Home
 
 <!-- ========== RESUME ========== -->
 <div class="docs-section-last" id="resume">
-  <h4>Vit&#230;</h4>
   <p>Here is my <a href={{ "/assets/Navya_Resume.pdf" | prepend: site.baseurl }} target="_blank">Resume</a>.</p>
+</div>
+
+<div class="docs-section-last" id="workex">
+  <h4>Work Experience</h4>
     <!-- The Timeline -->
     <ul class="timeline">
         {% for exp in site.data.experience.experiences %}

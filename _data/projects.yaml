@@ -1,6 +1,7 @@
 projects:
   - title: "Distributed Caching Infrastructure"
-    subtitle: "Developed a high-performance, scalable, and fault-tolerant caching solution using Go \nTech stack: Go, Zookeper, Redis, Shell, Docker"
+    subtitle: "Developed a high-performance, scalable, and fault-tolerant caching solution using Go"
+    tech_stack: "Go, Zookeper, Redis, Shell, Docker"
     thumbnail: "assets/posts/github-capa.jpg"
     url: "https://github.com/Navya1707/distributed-caching-infrastructure"
     selected: y

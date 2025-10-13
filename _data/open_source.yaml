@@ -1,0 +1,12 @@
+open_source:
+  - title: "Pandas"
+    subtitle: "Refactored the DataFrame.groupby implementation to remove the @Appender decorator and inline its logic directly within the method, improving execution flow in the API and reducing unnecessary abstraction"
+    thumbnail: "assets/posts/pandas.png"
+    url: "https://github.com/pandas-dev/pandas/pull/62667"
+    selected: y
+
+  - title: "TensorFlow"
+    subtitle: "Aligned GPU kernel behavior with CPU by enforcing singularity checks in tf.linalg.solve, ensuring consistent exception handling across devices."
+    thumbnail: "assets/posts/tensorflow.png"
+    url: ""
+    selected: y

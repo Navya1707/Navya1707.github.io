@@ -150,7 +150,35 @@ title: Home
 
 <div class="docs-section-last" id="OpenSourcecontributions">
   <h4>Open Source Contributions</h4>
-  <p>Coming soon.. one of my recent interests! Currently working on open source contributions for TensorFlow, Pandas and AnitaB.org</p>
+  <div class="tab-pane" id="OpenSourcecontributions-all">
+    {% for OpenSourcecontribution in site.data.open_source.open_source %}
+      {% assign index_modulo = forloop.index0 | modulo:3 %}
+      {% if index_modulo == 0 %}
+        <div class="row">
+      {% endif %}
+
+        <div class="four columns">
+          <div class="project-container">
+
+              <div class="project-image-container">
+                <a href="{{ OpenSourcecontribution.url }}">
+                  <img src="{{ OpenSourcecontribution.thumbnail }}" class="u-max-full-width" />
+                </a>
+              </div>
+
+              <div class="project-caption">
+                <b>{{ OpenSourcecontribution.title }}</b> <br/>
+                {{ OpenSourcecontribution.subtitle }} 
+              </div>
+
+          </div>
+        </div>
+
+      {% if index_modulo == 2 %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 
